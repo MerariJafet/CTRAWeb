@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>CTRA 60 | Soluciones tecnológicas integrales</title>
+  <title>SEMAR | Soluciones tecnológicas integrales</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
 
   <!-- FontAwesome icons -->
   <script src="https://kit.fontawesome.com/a9c3c2c5af.js" crossorigin="anonymous"></script>
@@ -20,28 +21,31 @@
 </head>
 <body>
 
-<header class="main-header glass">
-  <div class="container-header">
-    <img src="assets/logo.png" alt="Logo CTRA 60" class="logo">
+<!-- Encabezado con nombre de empresa -->
+<div class="topbar">
+  <h1 class="empresa-title animate-title">
+    GRUPO SEMAR <span class="azul">INGENERY</span> DE MEXICO
+  </h1>
+</div>
 
-    <nav class="navbar">
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="cases.html">Casos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <form class="search-form" action="#buscar" method="GET">
-        <input type="text" name="q" placeholder="Buscar…" aria-label="Buscar">
-        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-      </form>
-    </nav>
-
-    <button id="themeToggle" aria-label="Cambiar tema" class="icon-btn">
-      <i class="fa-solid fa-moon"></i>
-    </button>
+<header class="custom-header">
+  <div class="logo-wrapper">
+    <div class="logo-container">
+      <video autoplay loop muted playsinline class="logo-video">
+        <source src="assets/logomov.mp4" type="video/mp4" />
+        Tu navegador no soporta videos.
+      </video>
+    </div>
   </div>
+  <nav class="menu">
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Proyectos</a></li>
+      <li><a href="#">Casos</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
 </header>
 
 
@@ -52,10 +56,18 @@
       <h1 data-sr>
         Tecnología <span class="accent">inteligente</span> que conecta, protege y transforma tu operación.
       </h1>
-      <p data-sr data-sr-delay="150">
-        Especialistas en CCTV, redes LAN/Wi‑Fi, nube y drones para seguridad y eficiencia en tiempo real.
-      </p>
-      <a href="#contacto" class="btn-cta" data-sr-delay="300">Agenda tu demo</a>
+      <p class="slogan">Tecnología que te protege, conecta y vuela contigo.</p>
+
+      <section class="tecnologias">
+        <div class="card-grid">
+          <div class="tech-card">CCTV</div>
+          <div class="tech-card">DRONES</div>
+          <div class="tech-card">MONITOREO</div>
+          <div class="tech-card">C5</div>
+          <div class="tech-card">REDES</div>
+        </div>
+      </section>
+      <a href="#contacto" class="btn-cta" data-sr-delay="300">Solicita una cotización</a>
     </div>
     <button class="scroll-cue" aria-label="Desplázate"><i class="fa-solid fa-chevron-down"></i></button>
   </section>
@@ -263,8 +275,12 @@
     loading="lazy" style="border:0;width:100%;height:300px;"></iframe>
 </section>
 
-<a href="https://wa.me/525610869771" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-  <i class="fa-brands fa-whatsapp"></i>
+
+<a href="https://wa.me/525561016082?text=Hola%2C%20estoy%20interesado%20en%20recibir%20informes%20de%20sus%20soluciones%20de%20tecnolog%C3%ADa"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="WhatsApp contacto">
+  <img src="assets/img/whatslogo.png" alt="WhatsApp" class="whats-icon">
 </a>
 
 <!-- Swiper (carrusel logos y testimonios) -->

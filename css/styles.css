@@ -1,5 +1,68 @@
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* Ícono interno */
+.whats-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+/* Contenedor de tarjetas */
+.tecnologias {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Tarjetas individuales */
+.tech-card {
+  background: linear-gradient(135deg, #002244, #0077cc);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  min-width: 120px;
+  cursor: pointer;
+}
+
+/* Animación al pasar el mouse */
+.tech-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 196, 255, 0.5);
+}
 /* ==========================================================================
-   CTRA 60 – Hoja de estilos principal
+   SEMAR – Hoja de estilos principal
    ========================================================================== */
 
 /* ---------- VARIABLES DE MARCA ---------- */
@@ -320,4 +383,141 @@ body.light a:hover{color:var(--brand-dark);}
   height:70px;
   background:var(--header-bg);
   box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Nombre de la empresa fijo arriba */
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 2000;
+  backdrop-filter: blur(6px);
+  margin-bottom: 10px; /* Agrega separación */
+}
+
+.empresa-title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 34px;
+  letter-spacing: 1.5px;
+  color: white;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.empresa-title .azul {
+  color: #00b8ff;
+}
+
+.animate-title {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeDown 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header general con transparencia */
+.custom-header {
+  margin-top: 30px; /* Antes era 80px o 60px */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #002244cc, #0077ccaa, #00c4ffaa);
+  padding: 0.8rem 3rem; /* Reduce grosor vertical */
+  height: 70px; /* Reduce altura visual del header */
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 50px; /* debajo de la topbar */
+  z-index: 1000;
+}
+
+/* Nuevo contenedor para permitir desbordamiento del logo */
+.logo-wrapper {
+  position: relative;
+  top: -40px; /* Ajusta entre -30px y -50px según cómo se vea */
+  z-index: 1001;
+}
+
+/* Logo más grande, sobresaliendo del header */
+.logo-container {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border: 3px solid white;
+}
+
+.logo-container:hover {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 0 20px rgba(0, 196, 255, 0.6);
+}
+
+.logo-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Menú */
+.menu {
+  margin-left: 180px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li a {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.menu ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #00c4ff;
+  transition: width 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: #00c4ff;
+}
+
+.menu ul li a:hover::after {
+  width: 100%;
 }

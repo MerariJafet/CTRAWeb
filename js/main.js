@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CTRA 60 – main.js
+   SEMAR – main.js
    ========================================================================== */
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ----------------------------------------------------------------------- */
   const toggleBtn       = document.getElementById('themeToggle');
   const prefersDark     = window.matchMedia('(prefers-color-scheme: dark)');
-  const storedTheme     = localStorage.getItem('ctra-theme');
+  const storedTheme     = localStorage.getItem('semar-theme');
 
   // Aplica la preferencia guardada o la del sistema
   if (storedTheme === 'light') document.body.classList.add('light');
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   toggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('light');
-    localStorage.setItem('ctra-theme',
+    localStorage.setItem('semar-theme',
       document.body.classList.contains('light') ? 'light' : 'dark');
     updateIcon();
   });
